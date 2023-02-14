@@ -1,9 +1,6 @@
-from flask import Flask, render_template, request, redirect
-
-from users import User
-
-
-app = Flask(__name__)    
+from flask_app.models.user import User
+from flask import render_template,redirect,request
+from user import User
 
 
 @app.route('/')          
@@ -71,11 +68,3 @@ def show(id):
         "id":id
     }
     return render_template("show_user.html",user=User.getOne(data)) 
-
-
-
-
-
-if __name__=="__main__":     
-    app.run(debug=True)    
-

@@ -1,6 +1,7 @@
 #This is the python file to make classes
 
-from mysqlconnection import connectToMySQL
+from  flask_app.config.mysqlconnection import connectToMySQL
+#need to update this statement
 
 #create db = name of server so you don't have to type it over and over again- less opportunity for errors
 class User:
